@@ -1,0 +1,36 @@
+#project{
+    padding: 10vh 20px;
+}
+#project h1{
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+    text-align: center;
+}
+#project .section-title::after{
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #0071E9;
+    border-radius: 999px;
+    margin: 0 auto;
+}
+.project-row{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+@media (max-width:1024px){
+    .project-row{
+        gap: 25px;
+    }
+}
+@media (max-width:768px){
+    .project-row{
+        flex-direction: column;
+        align-items: center;
+    }
+}
