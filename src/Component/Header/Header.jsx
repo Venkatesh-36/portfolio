@@ -33,17 +33,30 @@ export default function Header() {
         function onScroll() {
             const headerHeight = document.getElementById("header")?.offsetHeight || 80;
             const scrollPos = window.scrollY + headerHeight + 10;
+            const windowBottom = window.scrollY + window.innerHeight;
+            const pageBottom = document.body.scrollHeight;
+            let foundSection = false;
             for (let i = sections.length - 1; i >= 0; i--) {
                 const section = document.getElementById(sections[i]);
                 if (section) {
                     const sectionTop = section.offsetTop;
                     const sectionBottom = sectionTop + section.offsetHeight;
-                    if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-                        setActiveSection(sections[i]);
-                        break;
+                    if (i === sections.length - 1) {
+                        if (scrollPos >= sectionTop || windowBottom >= pageBottom - 5) {
+                            setActiveSection(sections[i]);
+                            foundSection = true;
+                            break;
+                        }
+                    } else {
+                        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                            setActiveSection(sections[i]);
+                            foundSection = true;
+                            break;
+                        }
                     }
                 }
             }
+            if (!foundSection) setActiveSection(sections[0]);
         }
         window.addEventListener('scroll', onScroll);
         return () => window.removeEventListener('scroll', onScroll);
@@ -51,21 +64,21 @@ export default function Header() {
     return (
         <div id="header" ref={menuRef}>
             <header className='head'>
-            <Logo>Venkatesh</Logo>
-            <div className={`option ${menuOpen ? "active" : ""}`}>
-            {sections.map(sec => (
-            <Option
-              key={sec}
-              onClick={() => handleClick(sec)}
-              className={activeSection === sec ? "active" : ""}
-            >
-              {sec.charAt(0).toUpperCase() + sec.slice(1)}
-            </Option>
-            ))}
-            </div>
-            <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-                <i className="fa-solid fa-bars"></i>
-            </div>
+                <Logo>Venkatesh</Logo>
+                <div className={`option ${menuOpen ? "active" : ""}`}>
+                    {sections.map(sec => (
+                        <Option
+                            key={sec}
+                            onClick={() => handleClick(sec)}
+                            className={activeSection === sec ? "active" : ""}
+                        >
+                            {sec.charAt(0).toUpperCase() + sec.slice(1)}
+                        </Option>
+                    ))}
+                </div>
+                <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                    <i className="fa-solid fa-bars"></i>
+                </div>
             </header>
         </div>
     );

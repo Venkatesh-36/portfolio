@@ -4,7 +4,7 @@ export default function Source({ icon, children, link }) {
         <div id="source">
             {link ? (
                 <a href={link} target="_blank" rel="noopener noreferrer">
-                    <i className={icon}></i> {children}
+                    <i className={icon}></i>
                 </a>
             ) : (
                 <p>

@@ -27,8 +27,8 @@ export default function Project({
                 })}
             </div>
             <div  className ="source">
-                {isCode && <Source icon="fa-brands fa-github" link={link}>Git Code</Source>}
-                {isDemo && <Source icon="fa-solid fa-arrow-up-right-from-square" link={linkDemo}>Live Demo</Source>}
+                {isCode && <Source icon="fa-brands fa-github" link={link}></Source>}
+                {isDemo && <Source icon="fa-solid fa-arrow-up-right-from-square" link={linkDemo}></Source>}
             </div>
             </div>
         </div>

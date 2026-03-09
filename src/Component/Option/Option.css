@@ -21,7 +21,7 @@
 }
 .option-item.active {
     color: #0071E9; 
-    font-weight: 700;
+    font-weight: bold;
 }
 .option-item.active::after {
     content: "";
