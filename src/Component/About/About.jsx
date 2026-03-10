@@ -5,9 +5,10 @@ export default function About(){
             <h1>About Me</h1>
             <h2 className="section-title"></h2>
             <div className="describe">
-                <p>Hello! I'm Venkatesh, a passionate Software Engineer interested in software development and quality assurance. I enjoy working on different parts of the development process, including backend development and testing, to build reliable and efficient applications.</p>
-                <p>My journey into development started with curiosity about how applications work, which later grew into a passion for learning new technologies and improving my problem-solving skills.</p>
-                <p>I am always looking for opportunities to learn, grow, and contribute to meaningful software projects.</p>
+                <p>A curious and aspiring software developer with a strong interest in software testing and backend development. I enjoy learning how systems work, improving software quality, and building reliable applications.</p>
+                <p>My journey into development started with curiosity about how applications function, which gradually grew into a passion for learning new technologies and improving my problem-solving skills through projects.</p>
+                <p>Beyond technology, I enjoy reading books, especially in Tamil, and I am a communicative and approachable person who enjoys sharing ideas and learning from others.</p>
+                <p>I am always eager to learn, grow, and contribute while strengthening my skills in testing and backend development.</p>
             </div>
         </div>
     );

@@ -20,12 +20,10 @@ export default function Home() {
                 <img src={user} alt="Venkatesh" />
             </div>
             <div className="details">
-                <h1>Hello, I'm Venkatesh</h1>
-                <h3>Software Engineer</h3>
+                <h1>Hey there! I’m Venkatesh 👋</h1>
+                <h3>Software Explorer</h3>
                 <p>
-                    A developer passionate about software testing and backend development.
-                    I enjoy ensuring software quality while building reliable backend systems
-                    and continuously learning new technologies.
+                A curious tech enthusiast currently exploring the world of software development. As a student, I enjoy building small projects, learning new technologies, and turning ideas into working solutions.
                 </p>
                 <Button onClick={() => scrollToSection("project")}>View Projects</Button>
             </div>
